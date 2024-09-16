@@ -1,5 +1,3 @@
-# Florence-2-vlm
-
 ## Install
 
 1. Install Package
@@ -17,6 +15,7 @@ pip install flash-attn --no-build-isolation
 ```
 
 
+## Dataset Download
 
 
 - Cambrian-7M: (https://huggingface.co/datasets/nyu-visionx/Cambrian-10M)
