@@ -23,10 +23,12 @@ pip install flash-attn --no-build-isolation
 from huggingface_hub import snapshot_download
 snapshot_download(repo_id='nyu-visionx/Cambrian-10M', repo_type='dataset')
 ```
+
+```
 cd {HF_HOME}/hub/datasets--nyu-visionx--Cambrian-10M/snapshots/a087b9234c59bc6c64e7e4a091a6a618cb887132
 python extract.py
 mv {HF_HOME}/hub/datasets--nyu-visionx--Cambrian-10M/snapshots/a087b9234c59bc6c64e7e4a091a6a618cb887132  {IMG}/Cambrian-7M
-
+```
 
 
 
