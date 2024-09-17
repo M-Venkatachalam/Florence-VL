@@ -69,7 +69,7 @@ mv ${HF_HOME}/hub/datasets--jiuhai--docmatix/snapshots/ab88fdb91d41777db7476c599
 ```
 
 
-
+TODO: ShareGPT4V
 
 
 Download the json file including the prompt and response: 
@@ -80,7 +80,6 @@ python -c "from huggingface_hub import snapshot_download; snapshot_download(repo
 
 
 
-TODO: ShareGPT4V
 
 
 
