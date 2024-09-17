@@ -9,8 +9,10 @@ export DATA_PATH=${HF_HOME}/hub/datasets--jiuhai--florence-data-sft/snapshots/16
 export IMG=${IMG}
 
 export CKPT_PATH=jiuhai/florence-phi-pretrain
-export VIT_PATH=/fsx_0/user/jiuhai/model/llava-pretrain-pixelprose-Phi3-second/vision_tower
-export OUTPUT=/fsx_0/user/jiuhai/model/llava-sft-Phi3-second-two-epoch
+export VIT_PATH=${HF_HOME}/hub/models--jiuhai--florence-phi-pretrain/snapshots/ac404bcf4d43bb07764c2aa9d8eb39bafe07a250/vision_tower
+
+
+export OUTPUT=${OUTPUT_DIR}/llava-sft-Phi3
 
 
 
@@ -20,7 +22,6 @@ export SAVE_PATH=phi3-sft
 
 export LEARNIG_RATE=9e-5
 
-export TUNE_ENTIRE_MODEL=true
 
 
 
@@ -50,7 +51,7 @@ srun -p q1 \
     --group_by_modality_length True \
     --bf16 True \
     --output_dir ${OUTPUT} \
-    --num_train_epochs 2 \
+    --num_train_epochs 3 \
     --per_device_train_batch_size 32 \
     --per_device_eval_batch_size 4 \
     --gradient_accumulation_steps 1 \

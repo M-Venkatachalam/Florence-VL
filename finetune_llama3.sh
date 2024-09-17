@@ -9,9 +9,10 @@ export DATA_PATH=${HF_HOME}/hub/datasets--jiuhai--florence-data-sft/snapshots/16
 
 export IMG=${IMG}
 
-export CKPT_PATH=/fsx_0/user/jiuhai/model/llava-llama-3-pretrain-pixelprose-all-final
-export VIT_PATH=/fsx_0/user/jiuhai/model/llava-llama-3-pretrain-pixelprose-all-final/vision_tower
-export OUTPUT=/fsx_0/user/jiuhai/model/llava-llama-3-sft-cambrian-second
+
+export CKPT_PATH=jiuhai/florence-llama-pretrain
+export VIT_PATH=${HF_HOME}/hub/models--jiuhai--florence-llama-pretrain/snapshots/b5c26b8c0048c394d8d8a5f91066702aa0bd9c07/vision_tower
+export OUTPUT=${OUTPUT_DIR}/llava-llama-3-sft
 
 
 

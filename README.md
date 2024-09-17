@@ -17,11 +17,12 @@ pip install flash-attn --no-build-isolation
 
 ## Dataset Download
 
-Please import the huggingface cache folder {HF_HOME} and image folder {IMG} (can be any folder)
+Please import the huggingface cache folder {HF_HOME}, image folder {IMG} for saving the image and {OUTPUT_DIR} for saving the final checkpoints (can be any folder).
 
 ```
 export HF_HOME = ...
 export IMG = ...
+export OUTPUT_DIR = ...
 ```
 
 - Cambrian-7M: (https://huggingface.co/datasets/nyu-visionx/Cambrian-10M)
