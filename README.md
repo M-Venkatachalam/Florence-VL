@@ -47,7 +47,7 @@ python -c "from huggingface_hub import snapshot_download; snapshot_download(repo
 ```
 Unzip the file:
 
-```
+```Shell
 cd ${HF_HOME}/hub/datasets--Vision-Flan--vision-flan/snapshots/e8c6f09736277ef63b33dea5e9bbe94392dba76c
 bash run.sh
 mv ${HF_HOME}/hub/datasets--Vision-Flan--vision-flan/snapshots/e8c6f09736277ef63b33dea5e9bbe94392dba76c   ${IMG}/vision_flan
@@ -58,9 +58,9 @@ mv ${HF_HOME}/hub/datasets--Vision-Flan--vision-flan/snapshots/e8c6f09736277ef63
 - Docmatix: (https://huggingface.co/datasets/jiuhai/docmatix)
 ```Shell
 python -c "from huggingface_hub import snapshot_download; snapshot_download(repo_id='jiuhai/docmatix', repo_type='dataset')"
-
 ```
 unzip the files
+```Shell
 cd ${HF_HOME}/hub/datasets--jiuhai--docmatix/snapshots/ab88fdb91d41777db7476c599df6bf78567ad13b
 cat image.tar.gz.part-aa image.tar.gz.part-ab image.tar.gz.part-ac > image.tar.gz
 tar -xzf image.tar.gz
