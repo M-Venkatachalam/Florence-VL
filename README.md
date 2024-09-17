@@ -2,7 +2,7 @@
 
 1. Install Package
 ```Shell
-conda create -n florence python=3.10 -y
+conda create -n florence python=3.11 -y
 conda activate florence
 pip install --upgrade pip  # enable PEP 660 support
 pip install -e .
