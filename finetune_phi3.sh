@@ -5,17 +5,10 @@ export MASTER_PORT=29501
 export CPUS_PER_TASK=24
 
 
-# export DATA_PATH=/fsx_0/user/jiuhai/data/ShareGPT4V/cambrian_sharegpt4v_vision_flan_docmatix.json
+export DATA_PATH=${HF_HOME}/hub/datasets--jiuhai--florence-data-sft/snapshots/1657c3d890ad36a28cf75b016f80b4263cade20f/cambrian_sharegpt4v_vision_flan_docmatix.json
+export IMG=${IMG}
 
-export DATA_PATH=/fsx_0/user/jiuhai/data/ShareGPT4V/cambrian_sharegpt4v_vision_flan_docmatix
-
-# export DATA_PATH=/fsx_0/user/jiuhai/hub/datasets--Vision-Flan--vision-flan/snapshots/e8c6f09736277ef63b33dea5e9bbe94392dba76c/vision_flan_processed.json
-
-
-
-export IMG=/fsx_0/user/jiuhai/data/LLaVA-Instruct-150K
-
-export CKPT_PATH=/fsx_0/user/jiuhai/model/llava-pretrain-pixelprose-Phi3-second
+export CKPT_PATH=jiuhai/florence-phi-pretrain
 export VIT_PATH=/fsx_0/user/jiuhai/model/llava-pretrain-pixelprose-Phi3-second/vision_tower
 export OUTPUT=/fsx_0/user/jiuhai/model/llava-sft-Phi3-second-two-epoch
 

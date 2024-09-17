@@ -5,9 +5,9 @@ export MASTER_PORT=29501
 export CPUS_PER_TASK=16
 
 
-export DATA_PATH=/fsx_0/user/jiuhai/data/ShareGPT4V/cambrian_sharegpt4v_vision_flan_docmatix
+export DATA_PATH=${HF_HOME}/hub/datasets--jiuhai--florence-data-sft/snapshots/1657c3d890ad36a28cf75b016f80b4263cade20f/cambrian_sharegpt4v_vision_flan_docmatix.json
 
-export IMG=/fsx_0/user/jiuhai/data/LLaVA-Instruct-150K
+export IMG=${IMG}
 
 export CKPT_PATH=/fsx_0/user/jiuhai/model/llava-llama-3-pretrain-pixelprose-all-final
 export VIT_PATH=/fsx_0/user/jiuhai/model/llava-llama-3-pretrain-pixelprose-all-final/vision_tower

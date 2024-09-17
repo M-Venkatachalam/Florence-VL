@@ -57,9 +57,9 @@ mv ${HF_HOME}/hub/datasets--Vision-Flan--vision-flan/snapshots/e8c6f09736277ef63
 
 - Docmatix: (https://huggingface.co/datasets/jiuhai/docmatix)
 ```Shell
-from huggingface_hub import snapshot_download
-snapshot_download(repo_id='jiuhai/docmatix', repo_type='dataset')
+python -c "from huggingface_hub import snapshot_download; snapshot_download(repo_id='jiuhai/docmatix', repo_type='dataset')"
 ```
+
 unzip the files
 cd ${HF_HOME}/hub/datasets--jiuhai--docmatix/snapshots/ab88fdb91d41777db7476c599df6bf78567ad13b
 cat image.tar.gz.part-aa image.tar.gz.part-ab image.tar.gz.part-ac > image.tar.gz
@@ -74,9 +74,9 @@ mv ${HF_HOME}/hub/datasets--jiuhai--docmatix/snapshots/ab88fdb91d41777db7476c599
 Download the json file including the prompt and response: 
 
 ```Shell
-from huggingface_hub import snapshot_download
-snapshot_download(repo_id='jiuhai/florence-data-sft', repo_type='dataset')
+python -c "from huggingface_hub import snapshot_download; snapshot_download(repo_id='jiuhai/florence-data-sft', repo_type='dataset')"
 ```
+
 
 
 TODO: ShareGPT4V

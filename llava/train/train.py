@@ -926,13 +926,7 @@ class LazySupervisedDataset(Dataset):
                  data_args: DataArguments):
         super(LazySupervisedDataset, self).__init__()
 
-        # list_data_dict = []
-        # list_data_dict.extend(json.load(open(f"{data_path}-part1.json", "r")))
-        # list_data_dict.extend(json.load(open(f"{data_path}-part2.json", "r")))
-        # list_data_dict.extend(json.load(open(f"{data_path}-part3.json", "r")))
         list_data_dict = json.load(open(data_path, "r"))
-
-    
 
         rank0_print("Formatting inputs...Skip in lazy mode")
         self.tokenizer = tokenizer
