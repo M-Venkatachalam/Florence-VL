@@ -1,19 +1,17 @@
 export CUDA_DEVICE_MAX_CONNECTIONS=1
 export GPUS_PER_NODE=8
-export NNODES=16
+export NNODES=4
 export MASTER_PORT=29501
 export CPUS_PER_TASK=24
 
 
-export DATA_PATH=${HF_HOME}/hub/datasets--jiuhai--florence-data-sft/snapshots/1657c3d890ad36a28cf75b016f80b4263cade20f/cambrian_sharegpt4v_vision_flan_docmatix.json
-export IMG=${IMG}
-
-export CKPT_PATH=jiuhai/florence-phi-pretrain
-export VIT_PATH=${HF_HOME}/hub/models--jiuhai--florence-phi-pretrain/snapshots/ac404bcf4d43bb07764c2aa9d8eb39bafe07a250/vision_tower
+export DATA_PATH=/mnt/data/florence-2-vlm-sft-data/cambrian_sharegpt4v_vision_flan_docmatix.json
+export IMG=/mnt/data/florence-2-vlm-sft-data/
 
 
-export OUTPUT=${OUTPUT_DIR}/llava-sft-Phi3
-
+export CKPT_PATH=/mnt/data/florence-2-vlm-pretrain/hub/models--jiuhai--florence-phi-pretrain/snapshots/ac404bcf4d43bb07764c2aa9d8eb39bafe07a250
+export VIT_PATH=/mnt/data/florence-2-vlm-pretrain/hub/models--jiuhai--florence-phi-pretrain/snapshots/ac404bcf4d43bb07764c2aa9d8eb39bafe07a250/vision_tower
+export OUTPUT=/mnt/data/florence-2-vlm-pretrain/llava-phi-3-sft
 
 
 
@@ -54,7 +52,7 @@ srun -p q1 \
     --num_train_epochs 3 \
     --per_device_train_batch_size 32 \
     --per_device_eval_batch_size 4 \
-    --gradient_accumulation_steps 1 \
+    --gradient_accumulation_steps 4 \
     --eval_strategy "no" \
     --save_strategy "steps" \
     --save_steps 50000 \
@@ -73,25 +71,3 @@ srun -p q1 \
     --run_name ${SAVE_PATH}'
 
 
-
-
-python -m accelerate.commands.launch \
-    --num_processes=8 \
-    -m lmms_eval \
-    --model llava \
-    --model_args pretrained="/fsx_0/user/jiuhai/model/llava-sft-Phi3-second-two-epoch,conv_template=phi3" \
-    --tasks  textvqa_val,gqa,realworldqa,vizwiz_vqa_val,scienceqa_img,pope,mmvet,mme,seedbench,hallusion_bench_image,llava_in_the_wild,mathvista_testmini,docvqa_val,ocrbench,chartqa,ai2d,mmmu_val,mmbench_en_dev,infovqa_val,mmbench_cn_dev,mmstar \
-    --batch_size 1 \
-    --log_samples \
-    --log_samples_suffix llava-llama-3-pretrain-gpt-full-20m \
-    --output_path ./logs/
-
-
-
-# bash scripts/v1_5/eval/cv_bench_2D.sh   /fsx_0/user/jiuhai/model/llava-llama-3-sft-phi3
-# bash scripts/v1_5/eval/cv_bench_3D.sh  /fsx_0/user/jiuhai/model/llava-llama-3-sft-phi3
-# bash scripts/v1_5/eval/mmvp.sh   /fsx_0/user/jiuhai/model/llava-llama-3-sft-phi3
-
-# python playground/data/eval/cv-bench/eval.py  /fsx_0/user/jiuhai/data/eval/cv-bench/llava-cv-bench-3D.jsonl   /data/home/jiuhai/llama3-mlp3x/playground/data/eval/cv-bench/test-3D.jsonl
-# python playground/data/eval/cv-bench/eval.py  /fsx_0/user/jiuhai/data/eval/cv-bench/llava-cv-bench-2D.jsonl   /data/home/jiuhai/llama3-mlp3x/playground/data/eval/cv-bench/test-2D.jsonl
-# python playground/data/eval/cv-bench/eval.py  /fsx_0/user/jiuhai/data/eval/mmvp/mmvp.jsonl   /data/home/jiuhai/llama3-mlp3x/playground/data/eval/mmvp/mmvp.jsonl

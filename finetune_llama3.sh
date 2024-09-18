@@ -1,18 +1,17 @@
 export CUDA_DEVICE_MAX_CONNECTIONS=1
 export GPUS_PER_NODE=8
-export NNODES=8
+export NNODES=4
 export MASTER_PORT=29501
 export CPUS_PER_TASK=16
 
 
-export DATA_PATH=${HF_HOME}/hub/datasets--jiuhai--florence-data-sft/snapshots/1657c3d890ad36a28cf75b016f80b4263cade20f/cambrian_sharegpt4v_vision_flan_docmatix.json
+export DATA_PATH=/mnt/data/florence-2-vlm-sft-data/cambrian_sharegpt4v_vision_flan_docmatix.json
+export IMG=/mnt/data/florence-2-vlm-sft-data/
 
-export IMG=${IMG}
 
-
-export CKPT_PATH=jiuhai/florence-llama-pretrain
-export VIT_PATH=${HF_HOME}/hub/models--jiuhai--florence-llama-pretrain/snapshots/b5c26b8c0048c394d8d8a5f91066702aa0bd9c07/vision_tower
-export OUTPUT=${OUTPUT_DIR}/llava-llama-3-sft
+export CKPT_PATH=/mnt/data/florence-2-vlm-pretrain/hub/models--jiuhai--florence-llama-pretrain/snapshots/b5c26b8c0048c394d8d8a5f91066702aa0bd9c07
+export VIT_PATH=/mnt/data/florence-2-vlm-pretrain/hub/models--jiuhai--florence-llama-pretrain/snapshots/b5c26b8c0048c394d8d8a5f91066702aa0bd9c07/vision_tower
+export OUTPUT=/mnt/data/florence-2-vlm-pretrain/llava-llama-3-sft
 
 
 
@@ -48,7 +47,7 @@ srun -p q1 \
     --num_train_epochs 1 \
     --per_device_train_batch_size 8 \
     --per_device_eval_batch_size 4 \
-    --gradient_accumulation_steps 1 \
+    --gradient_accumulation_steps 2 \
     --eval_strategy "no" \
     --save_strategy "steps" \
     --save_steps 30000 \

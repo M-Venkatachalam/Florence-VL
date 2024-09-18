@@ -1,0 +1,58 @@
+description: florence-vlm-sft
+
+target:
+  service: sing  ## service name
+  workspace_name: vision-sing-florence-ws01-eastus ## workspace_name      
+  name: msrresrchvc  ##  name
+
+environment:
+  image: pytorch/pytorch:2.0.1-cuda11.7-cudnn8-devel  ## image 
+  setup:
+  - sudo apt-get update  &&  sudo apt-get install -y libgl1
+  - wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh 
+  - bash Miniconda3-latest-Linux-x86_64.sh -b -p /opt/conda 
+  - rm -f Miniconda3-latest-Linux-x86_64.sh
+  - source /opt/conda/bin/activate
+  - conda create -n florence python=3.11 -y
+  - source activate florence
+  - python -m pip install --upgrade pip
+  - python -m pip install -e .
+  - python -m pip install -e ".[train]"
+  - python -m pip install flash-attn --no-build-isolation
+  - export HF_HOME=/mnt/data
+  - export WANDB_API_KEY='d8075df78a873149bb390d22e6fc2c6de539e365'
+
+
+
+
+
+storage:
+  data:
+    storage_account_name: internexp    ## account name
+    container_name: jiuhai-data   ## container name
+    mount_dir: /mnt/data
+
+
+code:
+  local_dir: ./
+
+
+job_template:
+  name: sft
+  sla_tier: standard  
+  priority: high
+  sku: 80G8 
+  mpi: True
+  command:
+    - bash finetune_llama3.sh  
+    - bash finetune_phi3.sh
+  submit_args:
+    max_attempts: 5
+    env:
+      NCCL_IB_DISABLE: 1
+      NCCL_DEBUG: INFO
+      NCCL_IB_TIMEOUT: 60
+      MKL_THREADING_LAYER: GNU
+      SHARED_MEMORY_PERCENT: 0.25
+      NCCL_SOCKET_IFNAME: eth0
+
