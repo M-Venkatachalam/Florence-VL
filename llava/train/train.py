@@ -1122,7 +1122,7 @@ def train(attn_implementation=None):
                 cache_dir=training_args.cache_dir,
                 **bnb_model_from_pretrained_args
             )
-        elif 'Phi' in model_args.model_name_or_path:
+        elif 'phi' in model_args.model_name_or_path:
             print("loading the LlavaPhiForCausalLM type checkpoint.")
             model = LlavaPhiForCausalLM.from_pretrained(
                 model_args.model_name_or_path,
