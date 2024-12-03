@@ -96,6 +96,7 @@ python -m accelerate.commands.launch \
 ## Acknowledgement
 
 [LLaVA](https://github.com/haotian-liu/LLaVA): We start from codebase from the amazing LLaVA.
+
 [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval): Thanks for amazing multimodal evaluation codebase.
 
 
