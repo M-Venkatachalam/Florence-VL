@@ -21,7 +21,26 @@ pip install -e .
 
 1. Pretrain Data:
 
-   Detailed Caption from [PixelProse](https://huggingface.co/datasets/tomg-group-umd/pixelprose).
+   Detailed Caption from [PixelProse](https://huggingface.co/datasets/tomg-group-umd/pixelprose) and [ShareGPT4V](https://huggingface.co/datasets/Lin-Chen/ShareGPT4V).
+
+2. Instruction Data:
+
+   TODO.
+
+## Training Script
+1. Pretraining
+```Shell
+bash pretrain.sh
+```
+3. Instruction tuning
+```Shell
+bash finetune.sh
+```
+
+## Checkpoint 
+
+1. Florence-VL 8B: [Pretrained Checkpoint](https://huggingface.co/jiuhai/florence-llama-pretrain) and [Instructed Checkpoint](https://huggingface.co/jiuhai/florence-llama-llava-sft).
+2. Florence-VL 3B: [Pretrained Checkpoint](https://huggingface.co/jiuhai/florence-phi-pretrain) and [Instructed Checkpoint](https://huggingface.co/jiuhai/florence-llama-ms).
 
 
 
