@@ -1,5 +1,6 @@
 import os
-from .clip_encoder import CLIPVisionTower, FlorenceVisionTower
+from .clip_encoder import CLIPVisionTower
+from .florence_encoder import FlorenceVisionTower
 
 
 def build_vision_tower(vision_tower_cfg, **kwargs):

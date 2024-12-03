@@ -1,5 +1,0 @@
-checkpoints
-images
-llava
-lmms-eval
-lmms-eval-old
