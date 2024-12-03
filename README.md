@@ -58,7 +58,7 @@ export DATA_PATH=/your/path/for/instuction/data/json/file
 export IMG=/your/image/folder
 
 export CKPT_PATH=/pretrain/checkpoint
-export VIT_PATH=/pretrain/vision/tower (usually included in the pretrain checkpoint)
+export VIT_PATH=/pretrain/vision/tower (usually included \in the pretrain checkpoint)
 export OUTPUT=/checkpoint/save/path
 ```
 
