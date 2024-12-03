@@ -28,44 +28,37 @@ pip install -e .
    TODO.
 
 ## Training Script
-1. Pretraining
+### Pretraining with llama 3.1-8B
+
 Set up your basic slurm information in the  ```scripts/florence-vl/llama/llama3.sh```
 Then you can run pretrain and finetune job:
 
-for the pre
-```Shell
-bash pretrain.sh
-```
-3. Instruction tuning
-```Shell
-bash finetune.sh
-```
 
 In ```scripts/florence-vl/llama/pretrain_llama.sh```, you need to manully export the following variable:
 
+```shell
+export NNODES=number of nodes
+export DATA_PATH=/your/path/for/pretrain/data/json/file
+export IMG=/your/image/folder
+export OUTPUT=/checkpoint/save/path
+```
 
-export NNODES={number of nodes}
-
-export DATA_PATH={your path for pretrain data json file}
-export IMG={your image folder}
-export OUTPUT={checkpoint save path}
 
 
 
 In ```scripts/florence-vl/llama/finetune_llama.sh```, you need to manully export the following variable:
 
 
+```shell
+export NNODES=number of nodes
+export DATA_PATH=/your/path/for/instuction/data/json/file
+export IMG=/your/image/folder
 
-export NNODES={number of nodes}
 
-export DATA_PATH={your path for json file}
-export IMG={your image folder}
-
-
-export CKPT_PATH={pretrain checkpoint}
-export VIT_PATH={pretrain vision tower (usually included in the pretrain checkpoint)}
-export OUTPUT={output model save path}
-
+export CKPT_PATH=/pretrain/checkpoint
+export VIT_PATH=/pretrain/vision/tower (usually included in the pretrain checkpoint)
+export OUTPUT=/checkpoint/save/path
+```
 
 
 
