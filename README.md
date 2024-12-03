@@ -77,10 +77,10 @@ python -m accelerate.commands.launch \
     -m lmms_eval \
     --model llava \
     --model_args pretrained="/your/model/path/,conv_template=/choose/from/llama3/or/phi" \
-    --tasks  ocrbench \
+    --tasks  textvqa_val,gqa,realworldqa,vizwiz_vqa_val,pope,scienceqa_img,mmvet,mme,seedbench,hallusion_bench_image,llava_in_the_wild,mathvista_testmini,docvqa_val,ocrbench,chartqa,ai2d,mmmu_val,mmbench_en_dev,infovqa_val,mmbench_cn_dev,mmstar \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix llava-llama-3-pretrain-gpt-full-20m \
+    --log_samples_suffix florence-vl \
     --output_path ./logs/
 ```
 
@@ -96,6 +96,7 @@ python -m accelerate.commands.launch \
 ## Acknowledgement
 
 [LLaVA](https://github.com/haotian-liu/LLaVA): We start from codebase from the amazing LLaVA.
+[lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval): Thanks for amazing multimodal evaluation codebase.
 
 
 
