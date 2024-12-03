@@ -88,8 +88,8 @@ python -m accelerate.commands.launch \
 
 ## Checkpoint 
 
-1. Florence-VL 8B: [Pretrained Checkpoint](https://huggingface.co/jiuhai/florence-llama-pretrain) and [Instructed Checkpoint](https://huggingface.co/jiuhai/florence-llama-llava-sft).
-2. Florence-VL 3B: [Pretrained Checkpoint](https://huggingface.co/jiuhai/florence-phi-pretrain) and [Instructed Checkpoint](https://huggingface.co/jiuhai/florence-llama-ms).
+1. Florence-VL 8B: [Pretrained Checkpoint](https://huggingface.co/jiuhai/florence-vl-8b-pretrain) and [Instructed Checkpoint](https://huggingface.co/jiuhai/florence-vl-8b-sft).
+2. Florence-VL 3B: [Pretrained Checkpoint](https://huggingface.co/jiuhai/florence-vl-3b-pretrain) and [Instructed Checkpoint](https://huggingface.co/jiuhai/florence-vl-8b-sft).
 
 
 
