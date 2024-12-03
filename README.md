@@ -28,7 +28,7 @@ pip install -e .
    TODO.
 
 ## Training Script
-### Pretraining with llama 3.1-8B
+### Training with llama 3.1-8B (phi-3 is similarly)
 
 Set up your basic slurm information in the  ```scripts/florence-vl/llama/llama3.sh```
 Then you can run pretrain and finetune job:
@@ -60,6 +60,28 @@ export IMG=/your/image/folder
 export CKPT_PATH=/pretrain/checkpoint
 export VIT_PATH=/pretrain/vision/tower (usually included in the pretrain checkpoint)
 export OUTPUT=/checkpoint/save/path
+```
+
+
+## Evaluation Script
+
+We use [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) for evaluation.
+
+```shell
+export OPENAI_API_KEY=your key
+```
+
+```shell
+python -m accelerate.commands.launch \
+    --num_processes=4 \
+    -m lmms_eval \
+    --model llava \
+    --model_args pretrained="/your/model/path/,conv_template=/choose/from/llama3/or/phi" \
+    --tasks  ocrbench \
+    --batch_size 1 \
+    --log_samples \
+    --log_samples_suffix llava-llama-3-pretrain-gpt-full-20m \
+    --output_path ./logs/
 ```
 
 
