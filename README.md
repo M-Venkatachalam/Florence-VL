@@ -71,6 +71,10 @@ export OUTPUT=/checkpoint/save/path
 
 
 
+## Acknowledgement
+
+[LLaVA](https://github.com/haotian-liu/LLaVA): We start from codebase from the amazing LLaVA.
+
 
 
 
