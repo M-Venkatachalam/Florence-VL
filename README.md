@@ -4,7 +4,7 @@
 ```Shell
 conda create -n florence-vl python=3.11 -y
 conda activate florence-vl
-pip install --upgrade pip  # enable PEP 660 support
+pip install --upgrade pip  
 pip install -e .
 pip install -e ".[train]"
 pip install flash-attn --no-build-isolation
@@ -28,7 +28,7 @@ pip install -e .
    TODO.
 
 ## Training Script
-### Training with llama 3.1-8B (phi-3 is similarly)
+### Training with llama 3.1-8B (phi-3 is similar)
 
 Set up your basic slurm information in the  ```scripts/florence-vl/llama/llama3.sh```
 Then you can run pretrain and finetune job:
