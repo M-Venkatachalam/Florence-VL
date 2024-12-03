@@ -38,8 +38,10 @@ In ```scripts/florence-vl/llama/pretrain_llama.sh```, you need to manully export
 
 ```shell
 export NNODES=number of nodes
+
 export DATA_PATH=/your/path/for/pretrain/data/json/file
 export IMG=/your/image/folder
+
 export OUTPUT=/checkpoint/save/path
 ```
 
@@ -51,9 +53,9 @@ In ```scripts/florence-vl/llama/finetune_llama.sh```, you need to manully export
 
 ```shell
 export NNODES=number of nodes
+
 export DATA_PATH=/your/path/for/instuction/data/json/file
 export IMG=/your/image/folder
-
 
 export CKPT_PATH=/pretrain/checkpoint
 export VIT_PATH=/pretrain/vision/tower (usually included in the pretrain checkpoint)
