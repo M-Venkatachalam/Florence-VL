@@ -1,5 +1,5 @@
 ## News
-* **[2024-12-05]** We release Arxiv paper, training code, checkpoint and Demo[[3B](https://huggingface.co/spaces/jiuhai/Florence-VL-3B), [8B](https://huggingface.co/spaces/jiuhai/Florence-VL-8B)]. 🤗 Have fun!
+* **[2024-12-05]** We release Arxiv paper, training code, checkpoint and Demo [[3B](https://huggingface.co/spaces/jiuhai/Florence-VL-3B), [8B](https://huggingface.co/spaces/jiuhai/Florence-VL-8B)]. 🤗 Have fun!
 
 
 ## Install Environment
