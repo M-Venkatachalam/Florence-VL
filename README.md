@@ -1,6 +1,6 @@
 #  Florence-VL: Enhancing Vision-Language Models with Generative Vision Encoder and Depth-Breadth Fusion.
 
-[[Paper]()] [[Project Page](https://arxiv.org/abs/2412.04424)] [[Demo 8B](https://huggingface.co/spaces/jiuhai/Florence-VL-8B)]  [[Checkpoint 8B](https://huggingface.co/jiuhai/florence-vl-8b-sft)]
+[[Paper](https://arxiv.org/abs/2412.04424)] [[Project Page](https://jiuhaichen.github.io/florence-vl.github.io/)] [[Demo 8B](https://huggingface.co/spaces/jiuhai/Florence-VL-8B)]  [[Checkpoint 8B](https://huggingface.co/jiuhai/florence-vl-8b-sft)]
 
 
 
