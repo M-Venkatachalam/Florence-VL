@@ -3,6 +3,8 @@
 [[Paper](https://arxiv.org/abs/2412.04424)] [[Project Page](https://jiuhaichen.github.io/florence-vl.github.io/)] [[Demo 8B](https://huggingface.co/spaces/jiuhai/Florence-VL-8B)]  [[Checkpoint 8B](https://huggingface.co/jiuhai/florence-vl-8b-sft)]
 
 
+![Florence-VL Results](playground/data/results.png)
+
 
 ## News
 * **[2024-12-05]** We release Arxiv paper, training code, checkpoint and Demo [[3B](https://huggingface.co/spaces/jiuhai/Florence-VL-3B), [8B](https://huggingface.co/spaces/jiuhai/Florence-VL-8B)]. 🤗 Have fun!
