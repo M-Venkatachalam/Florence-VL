@@ -1,0 +1,4 @@
+Dataset: MS-COCO
+Training Images: 118,287
+Validation Images: 5,000
+Preprocessing: Resized to 224x224, normalized using mean [0.485, 0.456, 0.406] and std [0.229, 0.224, 0.225].
