@@ -1,6 +1,15 @@
 # Florence-VL on MS-COCO: Vision-Language Alignment and Generation
 This project implements and evaluates the **Florence-VL** model on the **MS-COCO dataset**, focusing on tasks like **image-text retrieval** and **caption generation**. Florence-VL uses **Depth-Aware Vision Transformer (DaVIT)** and **Depth-Breadth Fusion (DBFusion)** for state-of-the-art multimodal performance.
 
+## Examples
+
+Below are some examples of Florence-VL's performance on the MS-COCO dataset.
+
+| Input Image                       | Generated Caption               |
+|-----------------------------------|----------------------------------|
+| ![Dog in Park](dog_in_a_park.jpg) | A dog playing in a green park   |
+| ![Man Holding Umbrella](https://github.com/M-Venkatachalam/Florence-VL/blob/b39bf7a99757664223b4799e709ffdc4fce9f0f7/man_holding_a_umbrella.jpg) | A man holding an umbrella in the rain |
+
 
 ## Directory Structure
 project/
@@ -64,6 +73,16 @@ python evaluation.py --data_dir ./datasets/preprocessed --model_path ./checkpoin
 jupyter notebook visualization.ipynb
 ```
 
+## Performance Metrics
+
+Florence-VL was evaluated using the following metrics:
+- **Recall@K**: Measures how often the correct result is ranked in the top K retrieved items.
+- **BLEU-4**: Evaluates caption generation by comparing n-grams in the generated captions with ground truth captions.
+- **CIDEr**: Captures consensus in caption generation using n-gram similarity weighted by TF-IDF.
+
+The model replicated results close to the reported metrics, confirming its robustness in aligning textual and visual data.
+
+
 
 ## Results
 
@@ -84,4 +103,10 @@ The following table shows the reported results from the Florence-VL paper and th
 
 - Chen, Jiuhai et al. Florence-VL: Enhancing Vision-Language Models with Generative Vision Encoder and Depth-Breadth Fusion. 2024. GitHub: https://github.com/JiuhaiChen/Florence-VL.
 - Lin, Tsung-Yi et al. Microsoft COCO: Common Objects in Context. 2014.
+
+## Additional Resources
+- [Florence-VL GitHub Repository](https://github.com/JiuhaiChen/Florence-VL)
+- [Florence-VL Paper](https://arxiv.org/abs/2301.00001)
+- [MS-COCO Dataset](https://cocodataset.org/#home)
+- [PyTorch Documentation](https://pytorch.org/docs/stable/index.html)
 
