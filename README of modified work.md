@@ -10,7 +10,6 @@ Below are some examples of Florence-VL's performance on the MS-COCO dataset.
 | ![Dog in Park](dog_in_a_park.jpg) | A dog playing in a green park   |
 | ![Man Holding Umbrella](https://github.com/M-Venkatachalam/Florence-VL/blob/b39bf7a99757664223b4799e709ffdc4fce9f0f7/man_holding_a_umbrella.jpg) | A man holding an umbrella in the rain |
 
-
 ## Directory Structure
 project/
 │
@@ -30,6 +29,7 @@ project/
 └── sample_images/              # Sample images and model predictions
     ├── input_image1.jpg
     └── predicted_captions.txt
+
 
 
 
