@@ -32,6 +32,7 @@ project/
     └── predicted_captions.txt
 
 
+
 ## Installation
 
 ### 1. Clone the Repository
