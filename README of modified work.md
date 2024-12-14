@@ -1,6 +1,10 @@
 # Florence-VL on MS-COCO: Vision-Language Alignment and Generation
 This project implements and evaluates the **Florence-VL** model on the **MS-COCO dataset**, focusing on tasks like **image-text retrieval** and **caption generation**. Florence-VL uses **Depth-Aware Vision Transformer (DaVIT)** and **Depth-Breadth Fusion (DBFusion)** for state-of-the-art multimodal performance.
 
+
+## Introduction
+Florence-VL is a state-of-the-art vision-language model designed to align textual and visual information seamlessly. This project evaluates Florence-VL's capabilities on the MS-COCO dataset for tasks like image-text retrieval and caption generation, highlighting its effectiveness through quantitative and qualitative analysis. The project also includes preprocessing steps, fine-tuning, and evaluation to replicate results from the original paper.
+
 ## Examples
 
 Below are some examples of Florence-VL's performance on the MS-COCO dataset.
@@ -8,29 +12,7 @@ Below are some examples of Florence-VL's performance on the MS-COCO dataset.
 | Input Image                       | Generated Caption               |
 |-----------------------------------|----------------------------------|
 | ![Dog in Park](dog_in_a_park.jpg) | A dog playing in a green park   |
-| ![Man Holding Umbrella](https://github.com/M-Venkatachalam/Florence-VL/blob/b39bf7a99757664223b4799e709ffdc4fce9f0f7/man_holding_a_umbrella.jpg) | A man holding an umbrella in the rain |
-
-## Directory Structure
-project/
-│
-├── florence_vl_model.py        # Florence-VL model implementation
-├── train_florence_vl.py        # Training script for Florence-VL
-├── evaluation.py               # Evaluation script for metrics like BLEU, CIDEr, etc.
-├── visualization.ipynb         # Notebook for generating visualizations
-├── project_report.pdf          # Detailed report of the project
-├── requirements.txt            # Python dependencies for the project
-├── training_logs.txt           # Training logs for Florence-VL
-├── README.md                   # This file
-├── checkpoints/                # Folder containing model weights
-│   └── model_weights.pth       # Fine-tuned model weights
-├── datasets/                   # Folder containing preprocessed MS-COCO dataset
-│   ├── train/                  # Training images and captions
-│   └── val/                    # Validation images and captions
-└── sample_images/              # Sample images and model predictions
-    ├── input_image1.jpg
-    └── predicted_captions.txt
-
-
+| ![Man Holding Umbrella](https://github.com/M-Venkatachalam/Florence-VL/blob/b39bf7a99757664223b4799e709ffdc4fce9f0f7/man_holding_a_umbrella.jpg) | A man holding an umbrella in the rain 
 
 
 ## Installation
@@ -54,6 +36,26 @@ pip install -r requirements.txt
 python preprocess_dataset.py --data_dir ./datasets --output_dir ./datasets/preprocessed
 ```
 
+## Directory Structure
+
+project/
+│
+├── florence_vl_model.py        # Florence-VL model implementation
+├── train_florence_vl.py        # Training script for Florence-VL
+├── evaluation.py               # Evaluation script for metrics like BLEU, CIDEr, etc.
+├── visualization.ipynb         # Notebook for generating visualizations
+├── project_report.pdf          # Detailed report of the project
+├── requirements.txt            # Python dependencies for the project
+├── training_logs.txt           # Training logs for Florence-VL
+├── README.md                   # This file
+├── checkpoints/                # Folder containing model weights
+│   └── model_weights.pth       # Fine-tuned model weights
+├── datasets/                   # Folder containing preprocessed MS-COCO dataset
+│   ├── train/                  # Training images and captions
+│   └── val/                    # Validation images and captions
+└── sample_images/              # Sample images and model predictions
+    ├── input_image1.jpg
+    └── predicted_captions.txt
 
 ## How to Run
 
