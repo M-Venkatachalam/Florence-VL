@@ -36,27 +36,6 @@ pip install -r requirements.txt
 python preprocess_dataset.py --data_dir ./datasets --output_dir ./datasets/preprocessed
 ```
 
-## Directory Structure
-
-project/
-│
-├── florence_vl_model.py        # Florence-VL model implementation
-├── train_florence_vl.py        # Training script for Florence-VL
-├── evaluation.py               # Evaluation script for metrics like BLEU, CIDEr, etc.
-├── visualization.ipynb         # Notebook for generating visualizations
-├── project_report.pdf          # Detailed report of the project
-├── requirements.txt            # Python dependencies for the project
-├── training_logs.txt           # Training logs for Florence-VL
-├── README.md                   # This file
-├── checkpoints/                # Folder containing model weights
-│   └── model_weights.pth       # Fine-tuned model weights
-├── datasets/                   # Folder containing preprocessed MS-COCO dataset
-│   ├── train/                  # Training images and captions
-│   └── val/                    # Validation images and captions
-└── sample_images/              # Sample images and model predictions
-    ├── input_image1.jpg
-    └── predicted_captions.txt
-
 ## How to Run
 
 ### Train the Model
